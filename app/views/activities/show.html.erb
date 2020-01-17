@@ -1,17 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Titletag:</strong>
+  <strong>Activity name:</strong>
   <%= @activity.titletag %>
 </p>
 
-<p>
-  <strong>Meta:</strong>
-  <%= @activity.meta %>
-</p>
 
 <p>
-  <strong>Cover image:</strong>
   <%= @activity.cover_image %>
 </p>
 
@@ -21,13 +16,13 @@
 </p>
 
 <p>
-  <strong>Date field:</strong>
+  <strong>Date:</strong>
   <%= @activity.date_field %>
 </p>
 
 <p>
-  <strong>Duration minutes:</strong>
-  <%= @activity.duration_minutes %>
+  <strong>Duration:</strong>
+  <%= @activity.duration_minutes %><p>minutes</p>
 </p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |

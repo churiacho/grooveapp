@@ -11,34 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :titletag %>
-    <%= form.text_field :titletag %>
-  </div>
 
   <div class="field">
-    <%= form.label :meta %>
-    <%= form.text_area :meta %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cover_image %>
-    <%= form.text_field :cover_image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
+    <%= form.label "Activity Name" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :date_field %>
+    <%= form.label "Date" %>
     <%= form.date_select :date_field %>
   </div>
 
   <div class="field">
-    <%= form.label :duration_minutes %>
-    <%= form.number_field :duration_minutes %>
+    <%= form.label "Duration" %><p>
+    <%= form.number_field :duration_minutes %><p>minutes</p>
   </div>
 
   <div class="actions">

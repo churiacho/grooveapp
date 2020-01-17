@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Titletag</th>
-      <th>Meta</th>
+
       <th>Cover image</th>
       <th>Title</th>
       <th>Date field</th>
@@ -18,8 +17,6 @@
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <td><%= activity.titletag %></td>
-        <td><%= activity.meta %></td>
         <td><%= activity.cover_image %></td>
         <td><%= activity.title %></td>
         <td><%= activity.date_field %></td>
