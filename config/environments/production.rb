@@ -28,7 +28,7 @@ Rails.application.configure do
         :password => ENV['SENDGRID_PASSWORD'],
         :domain => 'https://git.heroku.com/moveandgroove-julia.git',
         :address => 'smtp.sendgrid.net',
-        :port => 587,
+        # :port => 587,
         :authentication => :plain,
         :enable_starttls_auto => true
       }
