@@ -1,8 +1,16 @@
 class User < ApplicationRecord
   has_many :activities
+
+  enum role: [:user, :admin, :vip]
+  after_initialize :set_default_role, :if => :new_record?
+
+    def set_default_role
+      self.role ||= :user
+    end
+  
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :lockable, :trackable, password_length: 10..70
+  # :confirmable, :timeoutable, and :omniauthable :registerable,
+  devise :database_authenticatable, :recoverable, :rememberable, :validatable, :lockable, :trackable, password_length: 10..70
 
   validate :password_complexity
     def password_complexity
