@@ -5,5 +5,18 @@ Rails.application.routes.draw do
 
   resources :activities
 
+  namespace :dashboard do
+    resources :mains
+    root to: "mains#index" 
+    resources :users do
+      collection do
+        patch 'update_password'
+        patch 'update_profile'
+        # patch 'update_profile_image'
+        patch 'create_user'
+      end
+    end
+  end
+
   root to: 'activities#index'
 end
